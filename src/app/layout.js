@@ -35,22 +35,23 @@ export default function RootLayout({ children }) {
   return (
     /*  <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}> */
     <html lang="en" className={manrope.className}>
-      <header className="m-1 p-1 grid grid-cols-[auto_1rem_1rem_2rem] justify-stretch gap-1 ">
-        <p>9:41</p>
-        <FaSignal />
-        <MdSignalWifiStatusbar4Bar />
-        <FaBatteryFull />
-      </header>
-      <Logo />
+      <body className=" m-1 p-1 min-h-full flex flex-col">
+        <header className="m-1 p-1 grid grid-cols-[auto_1rem_1rem_2rem] justify-stretch gap-1  ">
+          <p>9:41</p>
+          <FaSignal />
+          <MdSignalWifiStatusbar4Bar />
+          <FaBatteryFull />
+        </header>
+        <Logo />
+        {children}
 
-      <body className=" m-1 p-1 min-h-full flex flex-col">{children}</body>
-
-      <footer className="flex justify-center gap-10 sticky  bottom-0 right-0 left-0 bg-white  p-5 backdrop-blur-[10px] ">
-        <LuHouse className= "size-[18] text-[#F2968F]  " />
-        <FaRegStar className= "size-[18] text-[#ACACAC]"/>
-        <BsChat className="size-[18] text-[#ACACAC]" />
-        <GoPerson className="size-[18] text-[#ACACAC]" />
-      </footer>
+        <footer className="flex justify-center gap-10 sticky  bottom-0 right-0 left-0 bg-white  p-5 backdrop-blur-[10px] ">
+          <LuHouse className="size-[18] text-[#F2968F]  " />
+          <FaRegStar className="size-[18] text-[#ACACAC]" />
+          <BsChat className="size-[18] text-[#ACACAC]" />
+          <GoPerson className="size-[18] text-[#ACACAC]" />
+        </footer>
+      </body>
     </html>
   );
 }
