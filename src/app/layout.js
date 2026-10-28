@@ -9,8 +9,8 @@ import { FaRegStar } from "react-icons/fa";
 import { BsChat } from "react-icons/bs";
 import { GoPerson } from "react-icons/go";
 import { Manrope } from "next/font/google";
-
-
+import { Provider } from "./components/favoritestarcontext";
+import  Footerstar  from "./components/footerstar";
 const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
@@ -43,15 +43,18 @@ export default function RootLayout({ children }) {
           <FaBatteryFull />
         </header>
         <Logo />
-        {children}
-
-        <footer className="flex justify-center gap-10 sticky  bottom-0 right-0 left-0 bg-white  p-5 backdrop-blur-[10px] ">
-          <LuHouse className="size-[18] text-[#F2968F]  " />
-          <FaRegStar className="size-[18] text-[#ACACAC]" />
-          <BsChat className="size-[18] text-[#ACACAC]" />
-          <GoPerson className="size-[18] text-[#ACACAC]" />
-        </footer>
+        <Provider>
+          {children}
+          <footer className="flex justify-center gap-10 sticky  bottom-0 right-0 left-0 bg-white  p-5 backdrop-blur-[10px] ">
+            <LuHouse className="size-[18] text-[#F2968F]  " />
+            <Footerstar  />
+            <BsChat className="size-[18] text-[#ACACAC]" />
+            <GoPerson className="size-[18] text-[#ACACAC]" />
+          </footer>
+        </Provider>
       </body>
     </html>
   );
 }
+
+

@@ -7,10 +7,10 @@ export default function ListView({searchParams}) {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <SearchBar  />
+        <SearchBar />
         <main className="grid grid-cols-2 gap-5">
           <BreedCard searchParams={searchParams} />
-
+       
           {/* <BreedCard title="Affenpinscher" country="Northern," secondary="Germany" />
    
           <BreedCard title="Afghan Hound" country="Afghanistan" secondary="" />

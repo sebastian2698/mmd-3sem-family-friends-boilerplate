@@ -52,10 +52,10 @@ body,header{
   }
 }
 
-.breedcard:nth-child(n + 2) .star {
+/* .breedcard:nth-child(n + 2) .star {
   color: white;
   opacity: 50%;
-}
+} */
 
 
 
